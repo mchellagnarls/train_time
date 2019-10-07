@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!--Bootstrap Link-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+​
+        
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="jumbotron text-center">
+                <h1>Train Time App</h1>
+                <h2>When's the train coming?</h2>
+            </div>
+            <div class="badge-primary">
+                    Current Train Schedule
+                </div>
+                <div class="border mb-3 border-primary">
+                    <table class="table responsive-responsive">
+                            <thead class="train-input">
+                                    <tr>
+                                        <th>Train Name</th>
+                                        <th>Destination</th>
+                                        <th>Frequency (mins)</th>
+                                        <th>Next Arrival</th>
+                                        <th>Minutes Away</th>
+                                    </tr>
+                            </thead>
+                            <tbody id="train-info">
+                                <tr>
+                                    <td id="destination"></td>
+                                    <td id="frequency"></td>
+                                    <td id="next-arrival"></td>
+                                    <td id="minutes-away"></td>
+                                </tr>
+                             
+                            </tbody>
+                        </table>
+                </div>
+        <div>
+            
+            <form class="mb-2 border border-primary">
+                
+                <div class="badge-primary">
+                    Add Train
+                </div>
+                <div class="m-3">
+                    <label for="train-name">Train Name</label>
+                    <input type="text" class="form-control" id="train-name" placeholder="Polar Express">
+                    <label for="train-destination">Destination</label>
+                    <input type="text" class="form-control" id="train-destination" placeholder="South Pole">
+                    <label for="first-train-time">First Train Time (HH:mm - military time)</label>
+                    <input type="text" class="form-control" id="first-train-time" placeholder="06:00">
+                    <label for="train-frequency">Frequency (mins)</label>
+                    <input type="text" class="form-control" id="train-frequency" placeholder="45 minutes">
+                    <button onclick="newTrain()" id="submit" type="submit" class="btn btn-primary mt-3">Submit</button>
+                </div>
+                   
+            </div>
+            </form>
+        </div>
+    </div>
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+            <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>
+​
+            <!--JQuery script tag at the bottom but before the javascript links-->
+            <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <!--Script Tags for Moment-->
+            <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+            <!--Script Tags for Javascript-->
+            <script  src="logic.js"></script>
+            
+            
+​
+    </body>
+</html>
